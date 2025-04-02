@@ -193,12 +193,11 @@ footer {
   margin: 5px 0;
 }
 
-/* Nouvelles règles pour inverser l'ordre visuel */
 .contact-details .contact-linkedin {
-  order: 1; /* L'icône passe en premier */
+  order: 1; 
 }
 .contact-details .contact-info {
-  order: 2; /* Le texte passe en deuxième */
+  order: 2; 
 }
 
 
@@ -276,7 +275,6 @@ footer a:hover, footer a:focus {
     flex-direction: column;      
     text-align: center;         
     justify-content: center;    
-    /* L'ordre défini plus haut s'applique aussi ici (LinkedIn en premier) */
   }
 
   .contact-info p {
