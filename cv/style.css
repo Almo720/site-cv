@@ -16,6 +16,10 @@ body {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 header {
   background-color: var(--couleur-primaire);
   color: var(--couleur-texte-inverse);
@@ -314,4 +318,5 @@ footer a:hover, footer a:focus {
         padding-left: 10px;
         padding-right: 10px;
     }
+
 }
