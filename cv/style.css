@@ -320,3 +320,86 @@ footer a:hover, footer a:focus {
     }
 
 }
+
+/* Conteneur principal qui met la photo et le texte côte à côte */
+.presentation-container {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 50px;           
+    margin-bottom: 40px; 
+    padding: 20px;       
+}
+
+/* Conteneur de la photo qui sert de base à l'animation */
+.photo-container {
+    position: relative;
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+}
+
+/* Style de la photo elle-même */
+.photo-profil {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    
+    /* AJOUT IMPORTANT : Pour bien cadrer votre visage */
+    /* Jouez avec la valeur "25%" pour monter ou descendre l'image dans le cercle */
+    object-position: center 25%;
+
+    /* AJOUT : Pour s'assurer que l'image est au-dessus de l'animation */
+    position: relative;
+    z-index: 2;
+}
+
+/* Le cercle bleu qui tourne */
+.photo-container::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+
+    /* MODIFICATION : Une bordure pleine pour être sûr qu'elle soit visible */
+    border: 5px solid #005a87; 
+    
+    border-radius: 50%;
+    
+    /* On s'assure que l'animation est bien appelée */
+
+}
+
+/* Définition de l'animation de rotation (inchangée) */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style pour la section de présentation à côté de la photo */
+#presentation {
+    max-width: 600px;
+}
+
+/* Media Queries pour la responsivité (optionnel, mais recommandé) */
+@media (max-width: 768px) {
+    .presentation-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .photo-container {
+        width: 180px;
+        height: 180px;
+    }
+}
