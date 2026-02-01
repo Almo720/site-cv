@@ -1,34 +1,31 @@
-:root {
-  --couleur-primaire: #005a87;
-  --couleur-secondaire: #e8f1f5;
-  --couleur-texte: #333333;
-  --couleur-texte-inverse: #ffffff;
-  --couleur-lien: #0066cc;
-  --couleur-bordure: #dddddd;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Lexend', sans-serif;
   line-height: 1.7;
-  color: var(--couleur-texte);
   background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 img {
-  max-width: 100%;
+  max-width: 80px;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
+
 header {
-  background-color: var(--couleur-primaire);
-  color: var(--couleur-texte-inverse);
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background:white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 100;
 }
 
@@ -43,14 +40,12 @@ header {
 }
 
 header .logo a {
-  color: var(--couleur-texte-inverse);
   font-size: 1.4em;
   font-weight: 700;
   text-decoration: none;
 }
 
 header nav a {
-  color: var(--couleur-texte-inverse);
   text-decoration: none;
   margin-right: 25px; 
   font-size: 1em;
